@@ -2,38 +2,64 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Piano</title>
+    <title>Modern Clix Web Piano</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Matemasie&family=New+Amsterdam&display=swap" rel="stylesheet">
   </head>
   <body>
+    <img class="logo" src="./assets/ModernclixWebPianoLogo.jpg" alt="Modern Clix Web Piano Logo" />
+    <div>
+      <p id="octave-indicator">Current Octave: C4.</p>
+    </div>
     <div id="piano">
-      <img class="logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="freeCodeCamp Logo" />
+      <p class="pianoLabel">Modern Clix Web Piano</p>
       <div class="keys">
-        <div class="key"></div>
-        <div class="key black--key"></div>
-        <div class="key black--key"></div>
-        <div class="key"></div>
-        <div class="key black--key"></div>
-        <div class="key black--key"></div>
-        <div class="key black--key"></div>
+        <div class="key" data-key="C3"></div> 
+        <div class="key black--key" data-key="Db3"></div> 
+        <div class="key" data-key="D3"></div> 
+        <div class="key black--key" data-key="Eb3"></div> 
+        <div class="key" data-key="E3"></div> 
+        <div class="key" data-key="F3"></div> 
+        <div class="key black--key" data-key="Gb3"></div> 
+        <div class="key" data-key="G3"></div> 
+        <div class="key black--key" data-key="Ab3"></div> 
+        <div class="key" data-key="A3"></div> 
+        <div class="key black--key" data-key="Bb3"></div> 
+        <div class="key" data-key="B3"></div> 
 
-        <div class="key"></div>
-        <div class="key black--key"></div>
-        <div class="key black--key"></div>
-        <div class="key"></div>
-        <div class="key black--key"></div>
-        <div class="key black--key"></div>
-        <div class="key black--key"></div>
+        <div class="key" data-key="C4"></div> 
+        <div class="key black--key" data-key="Db4"></div> 
+        <div class="key" data-key="D4"></div> 
+        <div class="key black--key" data-key="Eb4"></div> 
+        <div class="key" data-key="E4"></div> 
+        <div class="key" data-key="F4"></div> 
+        <div class="key black--key" data-key="Gb4"></div> 
+        <div class="key" data-key="G4"></div> 
+        <div class="key black--key" data-key="Ab4"></div> 
+        <div class="key" data-key="A4"></div> 
+        <div class="key black--key" data-key="Bb4"></div> 
+        <div class="key" data-key="B4"></div> 
+        
+        <div class="key" data-key="C5"></div> 
+        <div class="key black--key" data-key="Db5"></div> 
+        <div class="key" data-key="D5"></div> 
+        <div class="key black--key" data-key="Eb5"></div> 
+        <div class="key" data-key="E5"></div> 
+        <div class="key" data-key="F5"></div> 
+        <div class="key black--key" data-key="Gb5"></div> 
+        <div class="key" data-key="G5"></div> 
+        <div class="key black--key" data-key="Ab5"></div> 
+        <div class="key" data-key="A5"></div> 
+        <div class="key black--key" data-key="Bb5"></div> 
+        <div class="key" data-key="B5"></div> 
 
-        <div class="key"></div>
-        <div class="key black--key"></div>
-        <div class="key black--key"></div>
-        <div class="key"></div>
-        <div class="key black--key"></div>
-        <div class="key black--key"></div>
-        <div class="key black--key"></div>
       </div>
     </div>
+    <p>Press "z" for an octave down and "x" for an octave up.</p>
+    <footer>Made with love by Juan José Mayotte.</footer>
+    <script src="./main.js"></script>  
   </body>
 </html>

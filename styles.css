@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  background-color: #272139;
 }
 
 *, *::before, *::after {
@@ -7,60 +8,122 @@ html {
 }
 
 #piano {
-  background-color: #00471b;
+  background-color: #c5012a;
   width: 992px;
   height: 290px;
-  margin: 80px auto;
+  margin: 10px auto;
   padding: 90px 20px 0 20px;
   position: relative;
   border-radius: 10px;
 }
 
+p, footer {
+  font-family: "New Amsterdam", sans-serif;
+  color:#ffffff;
+  text-align: center;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  text-align: right;
+}
+
+#octave-indicator {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
 .keys {
-  background-color: #040404;
-  width: 949px;
+  display: flex;
+  position: relative;
   height: 180px;
-  padding-left: 2px;
-  overflow: hidden;
 }
 
 .key {
   background-color: #ffffff;
-  position: relative;
   width: 41px;
   height: 175px;
-  margin: 2px;
-  float: left;
+  margin: 0 1px;
+  border-radius: 0 0 3px 3px;
+  position: relative;
+  z-index: 1;
+}
+
+.key.black--key {
+  background-color: #1d1e22;
+  width: 30px;
+  height: 100px;
+  margin-left: -15px;
+  margin-right: -15px;
+  z-index: 2;
   border-radius: 0 0 3px 3px;
 }
 
+.key:active {
+  background-color: #d1d1d1; 
+}
+
+.key.active {
+  background-color: #d1d1d1; 
+}
+
+.key.black--key:active {
+  background-color: #333; 
+}
+.key.black--key.active {
+  background-color: #333; 
+}
+
+
 .key.black--key::after {
-  background-color: #1d1e22;
   content: "";
   position: absolute;
-  left: -18px;
-  width: 32px;
-  height: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
   border-radius: 0 0 3px 3px;
+}
+
+.pianoLabel {
+  font-family: "Matemasie", sans-serif;
+  font-size: 1.5em;
+  position: absolute;
+  top: 23px;
+  display: inline;
+  margin-top: 0;
+  color:antiquewhite;
 }
 
 .logo {
-  width: 200px;
-  position: absolute;
-  top: 23px;
+  width: 180px;
 }
 
 @media (max-width: 768px) {
   #piano {
-    width: 358px;
+    width: 400px;
   }
 
   .keys {
-    width: 318px;
+    width: 360px;
   }
 
   .logo {
     width: 150px;
+  }
+
+  .key {
+    border: #1d1e22 solid 1px;
+    border-top: 0;
+    margin: 0 0.5px;
+  }
+  .key.black--key {
+    border: #ffffff solid 1px;
+    border-top: 0;
   }
 }
 
@@ -68,7 +131,17 @@ html {
   #piano {
     width: 675px;
   }
+
   .keys {
     width: 633px;
+  }
+  .key {
+    border: #1d1e22 solid 1px;
+    border-top: 0;
+    margin: 0 0.5px;
+  }
+  .key.black--key {
+    border: #ffffff solid 1px;
+    border-top: 0;
   }
 }
